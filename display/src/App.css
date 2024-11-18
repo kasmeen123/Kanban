@@ -1,0 +1,166 @@
+/* Base container */
+.container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background-color: #f4f5f7;
+  }
+  
+  /* Filter container */
+  .filter-container {
+    margin-top: 16px;
+    margin-left: 10px;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+  }
+  
+.select-dropdown {
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #fff;
+    color: #333;
+    transition: border-color 0.3s;
+    position: relative;
+    top: -10px; /* Move the dropdown 6px towards the top */
+  }
+  
+  /* Columns layout */
+  .columns-container {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap; /* Allows the columns to wrap on smaller screens */
+  }
+  
+  /* Each column */
+  .column {
+    flex: 1;
+    border-radius: 8px;
+    background-color: #fff;
+    padding: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 16px; /* Space between columns */
+    min-width: 250px; /* Ensures columns don't get too narrow */
+  }
+  
+  /* Column header */
+  .column-header {
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    gap: 5px; /* Adjust the space between title and actions */
+  }
+  
+  .column-header h3 {
+    margin: 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .column-header h3 span {
+    margin-right: 8px;
+    font-size: 24px;
+  }
+  
+  /* Add button and ellipsis container */
+  .header-actions {
+    display: inline-flex; /* Ensures the elements stay on the same line */
+    align-items: center;
+    gap: 4px; /* Reduced space between the add button and ellipsis */
+    margin: 0;  /* Ensure there's no extra margin on the container */
+    padding: 0; /* Ensure no padding is interfering */
+  }
+  
+  /* Add button */
+  .add-button {
+    background-color: #fff;
+    border: 2px solid #ddd;
+    padding: 6px 12px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+    margin-left: auto; /* Move the add button to the right */
+  }
+  
+  /* Add button hover effect */
+  .add-button:hover {
+    background-color: #f0f0f0;
+    color: #000;
+  }
+  
+  /* Ellipsis icon */
+  .ellipsis {
+    font-size: 24px;
+    cursor: pointer;
+    margin: 0; /* Ensure no margin on the ellipsis */
+    position: relative;
+    top: -9px;
+    left: 4px;
+  }
+  
+  /* Task cards layout */
+  .task-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  /* User avatar */
+  .user-avatar {
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+    border-radius: 50%;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .columns-container {
+      flex-direction: column; /* Stack columns on smaller screens */
+      gap: 12px; /* Reduced gap between columns */
+    }
+  
+    .column {
+      min-width: 100%; /* Full width for each column */
+      padding: 12px; /* Reduced padding for smaller screens */
+    }
+  
+    /* Adjust column title font size */
+    .column-title {
+      font-size: 16px; /* Smaller title font size on mobile */
+    }
+  
+    /* Task card */
+    .task-card {
+      padding: 12px; /* Reduced padding */
+      margin-bottom: 12px; /* Reduced bottom margin */
+    }
+  
+    .task-title {
+      font-size: 14px; /* Smaller task title font size */
+    }
+  
+    .task-description {
+      font-size: 12px; /* Smaller description font size */
+    }
+  
+    /* Adjust the filter section */
+    .filter-container {
+      flex-direction: column; /* Stack filter icon and dropdown */
+      align-items: flex-start;
+    }
+  
+    .select-dropdown {
+      width: 100%; /* Full width for the dropdown on mobile */
+    }
+  }
+  
